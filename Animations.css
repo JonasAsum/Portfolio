@@ -1,0 +1,602 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Background Header Animation */
+
+
+@keyframes animate2 {
+
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+@keyframes animate1 {
+
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes animate3 {
+
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes animate4 {
+
+    0% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+section {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(13, 13, 13);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    cursor: default;
+    z-index: 1;
+}
+
+section .row {
+    top: -50%;
+    position: relative;
+    width: 100%;
+    padding: 5px 0;
+    display: flex;
+    white-space: nowrap;
+    font-size: 64px;
+    transform: rotate(-30deg);
+}
+
+.wrapper section img {
+    filter: contrast(10%);
+    filter: grayscale(100%);
+    opacity: 0.1;
+    transition: 1s;
+    user-select: none;
+    padding: 0 5px;
+
+}
+
+.wrapper section img:hover {
+    filter: none;
+    opacity: 1;
+    transition: 0s;
+
+}
+
+#css-logo,
+#github-logo,
+#html-logo {
+    height: 80px;
+    width: 60px;
+}
+
+#javascript-logo {
+    height: 70px;
+    width: 70px;
+}
+
+#git-logo,
+#postgre-logo,
+#python-logo,
+#sql-logo {
+    height: 75px;
+    width: 75px;
+}
+
+#react-logo {
+    height: 75px;
+    width: 82px;
+}
+
+section .row div {
+    animation: animate1 160s linear infinite;
+    animation-delay: -160s;
+}
+
+section .row div:nth-child(2) {
+    animation: animate2 160s linear infinite;
+    animation-delay: -80s;
+
+}
+
+section .row:nth-child(even) div {
+    animation: animate3 160s linear infinite;
+    animation-delay: -160s;
+}
+
+section .row:nth-child(even) div:nth-child(2) {
+    animation: animate4 160s linear infinite;
+    animation-delay: -80s;
+
+}
+
+.css-logo,
+.github-logo,
+.html-logo {
+    height: 80px;
+    width: 60px;
+}
+
+.javascript-logo {
+    height: 70px;
+    width: 70px;
+}
+
+.git-logo,
+.postgre-logo,
+.python-logo,
+.sql-logo {
+    height: 75px;
+    width: 75px;
+}
+
+.react-logo {
+    height: 75px;
+    width: 82px;
+}
+
+/*Nav Bar Animation */
+
+
+.navigation {
+    width: 70px;
+    /* Adjusted for vertical alignment */
+    height: auto;
+    /* Adjusted to wrap all items vertically */
+    background-color: rgba(74, 74, 74, 0);
+    border-radius: 35px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    /* Added for flexbox layout */
+    flex-direction: column;
+    /* Stack items vertically */
+    justify-content: start;
+    /* Align items to the start of the flex container */
+    align-items: center;
+    /* Center items horizontally */
+    z-index: 5;
+    right: 0;
+    top: 0;
+    position: fixed;
+    box-sizing: border-box;
+}
+
+.navigation ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* Stack list items vertically */
+    opacity: 1;
+}
+
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 2;
+}
+
+.navigation ul li a {
+    display: block;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+    color: #575757;
+    text-decoration: none;
+}
+
+.navigation ul li a .icon {
+    display: block;
+    line-height: 75px;
+    text-align: center;
+    transition: 0.5s;
+    top: 6px;
+    text-align: center;
+}
+
+.navigation ul li a .icon .fa {
+    font-size: 24px;
+
+}
+
+.navigation ul li.active .icon {
+    color: white;
+}
+.navigation ul li a .title {
+    position: relative;
+    display: flex;
+    right: 90px;
+    z-index: 2;
+    transform: translateX(50%);
+    background-color: white;
+    width: auto;
+    justify-content: center;
+    padding: 10px 5px;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    bottom: 45px;
+
+}
+
+.navigation ul li:hover a .title {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%);
+    z-index: 2;
+
+}
+
+.navigation ul li a .title::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    top: 18px;
+    left: 85%;
+    transform: rotate(45deg) translateY(-50%);
+    border-radius: 2px;
+}
+
+.navigation ul .indicator {
+    position: absolute;
+    Left: 0;
+    width: 70px;
+    height: 70px;
+    transition: 0.5s;
+}
+
+.navigation ul .indicator::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    Left: 50%;
+    transform: translate(-50%, -50%);
+    background: #333;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.navigation ul li:nth-child(1).active ~ .indicator {
+    transform: translateY(calc(70px 0));
+}
+.navigation ul li:nth-child(2).active ~ .indicator {
+    transform: translateY(calc(70px * 1));
+}
+.navigation ul li:nth-child(3).active ~ .indicator {
+    transform: translateY(calc(70px * 2));
+}
+.navigation ul li:nth-child(4).active ~ .indicator {
+    transform: translateY(calc(70px * 3));
+}
+.navigation ul li:nth-child(5).active ~ .indicator {
+    transform: translateY(calc(70px * 4));
+}
+
+/*Skill Section Animation*/
+
+#skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    flex-direction: row;
+
+}
+
+.card {
+    position: relative;
+    width: 30%;
+    height: 350px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.card .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.card .circle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #4e24df;
+    clip-path: circle(120px at center);
+    transition: 0.5s;
+
+}
+
+/* Correct the background of .circle::before for the second .card as previously intended */
+#skills .card:nth-of-type(2) .circle::before {
+    background: #4e24df;
+}
+
+/* Target text elements within .content of the second .card to change font color */
+#skills .card:nth-of-type(2) .content,
+#skills .card:nth-of-type(2) .content p {
+    color: white;
+}
+
+#skills .card:nth-of-type(2) .content h2 {
+    color: white;
+}
+
+.card:hover .circle::before {
+    clip-path: circle(400px at center);
+    border-radius: 20px;
+}
+
+.card img {
+    position: absolute;
+    top: 28%;
+    Left: 29%;
+    transform: translate (-50%, -50%);
+    height: 160px;
+    pointer-events: none;
+    transition: 0.3s;
+    opacity: 1;
+
+}
+
+
+
+.card:hover img {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.card .content {
+    position: relative;
+    width: 50%;
+    left: 20%;
+    padding: 20px 20px 20px 40px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+.card:hover .content {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.card .content h2 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 2em;
+    Line-height: 1em;
+}
+.card .content p {
+    color: white;
+}
+
+@media only screen and (max-width: 991px) {
+    .card {
+        max-width: 350px;
+        width: 100%;
+        align-items: flex-start;
+        margin: 10px;
+
+    }
+    .card:hover {
+        height: 600px;
+    }
+    .card .content {
+        width: 100%;
+        Left: 0;
+        padding: 40px;
+    }
+
+}
+
+@media only screen and (max-width: 550) {
+    .card .content {
+        padding: 20px;
+    }
+}
+
+
+/*Animation for Contact Icons */
+
+
+
+.socialMedia {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    min-height: 100vh;
+    flex-direction: column;
+    z-index: 4;
+    position: fixed;
+}
+
+.sci li {
+    list-style: none;
+}
+
+.sci li:hover::before {
+    opacity: 0.1;
+    transform: translate(-50%, calc(-50% + 150px));
+}
+
+.sci li a {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: rgba(233, 236, 239,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    border-radius: 10px;
+    text-decoration: none;
+    margin: 20px;
+    font-size: 1.7em;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    box-shadow: 0 25px 35px rgba(0, 0, 0, 0.4);
+    transition: background 0.25s;
+}
+
+.js-tilt-glare {
+    border-radius: 10px;
+}
+
+.sci li a:hover.resume,
+.sci li a:hover.email,
+.sci li a:hover.linkedin
+ {
+    background: #FFD300;
+}
+
+
+.sci li a .fa,
+.sci li a:hover .fa-brands {
+    transition: 0.25s;
+    pointer-events: none;
+}
+.sci li a:hover .fa,
+.sci li a:hover .fa-brands {
+    color: #fff;
+    transform: scale(1.1) translateZ(30px);
+}
+
+/* The following is part of the Project part */
+
+.slider-wrapper {
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    scroll-behavior: smooth;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+
+}
+
+.slide {
+    flex: 0 0 100%;
+    /* This ensures the anchor tags do not stretch and only take up as much space as needed. */
+    scroll-snap-align: start;
+    cursor: pointer;
+
+}
+
+.slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+#make_it_bigger {
+    height: 50px;
+    width: 50px;
+    background-color: #FFD300;
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    right: 20px;
+    top: 20px;
+}
+
+
+
+.slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+
+}
+
+.slider-nav a {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: rgb(73, 73, 73);
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+
+}
+
+.slider-nav a:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.slide {
+    transition: transform 0.3s ease;
+    /* Smooth transition for movement */
+}
+
+.nav-highlight {
+    position: absolute;
+    background-color: white;
+    /* The highlight color */
+    border-radius: 50%;
+    width: 0.5rem;
+    /* Match the size of your dots */
+    height: 0.5rem;
+    transition: transform 0.3s ease;
+    /* Smooth transition for movement */
+    z-index: 3;
+    /* transform: translate(48px); */
+
+}

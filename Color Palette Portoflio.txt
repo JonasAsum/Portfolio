@@ -1,0 +1,3 @@
+Dominant: rgb(13, 13, 13)
+Secondary: #5927E5 && #4e24df
+Complimentary: #FFD300

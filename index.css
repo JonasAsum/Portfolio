@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(13, 13, 13);
+    color: white;
+    font-family: "IBM Plex Sans", sans-serif;
+    
+
+}
+
+.nav-container {
+    width: 10%;
+    height: 6rem;
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    align-items: center;
+    padding: 0 10px;
+    /* Add padding to the left and right */
+
+}
+
+#name {
+    display: flex;
+    align-items: center;
+}
+
+#name p {
+    font-size: 20px;
+    margin: 0;
+    /* Remove margin from paragraph if there is any */
+    padding-left: 10px;
+    color: #C5C6C7;
+}
+
+header {
+    min-height: 100vh;
+    /* Use viewport height to cover the full height of the screen */
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    /* transform-style: preserve-3d; */
+}
+
+header img {
+    height: 75%;
+    width: 19%;
+    position: absolute;
+    z-index: 1;
+    filter: none;
+    opacity: 2;
+}
+
+header h1 {
+    color: white;
+    position: relative;
+    z-index: 2;
+
+}
+
+#first {
+    bottom: 350px;
+    right: 100px;
+}
+
+#second {
+    bottom: 350px;
+    left: 100px;
+}
+
+h1 span{
+    color: #5927E5;
+}
+
+#about {
+    margin: auto;
+    width: 68%;
+    top: 80px;
+    margin-top: 150px;
+}
+
+#about h2 {
+    font-size: 18px;
+    padding-bottom: 50px;
+    
+
+}
+
+#about div p {
+    font-size: 48px;
+    text-align: left;
+
+}
+
+#about span {
+    color:#5927E5;
+}
+
+.hidden {
+    opacity: 0;
+    transition: all 2s;
+}
+
+.show {
+    opacity: 1;
+}
+
+.classtitles {
+    width: 68%;
+    height: 10vh;
+    margin: 200px auto 50px;
+    font-size: 20px;
+   
+}
+
+.classtitles h2 {
+    font-size: 20px;
+}
+
+.hero {
+    margin-top: 50px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(13,13,13,0.7), #4e24df);
+}
+
+form {
+    width: 90%;
+    max-width: 600px;
+}
+
+.input-group {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.contactsection {
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid white;
+    color: white;
+    background: transparent;
+    font-size: 15px;
+}
+
+.contactsectionLabel {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.502);
+    cursor: text;
+    transition: 0.2s;
+}
+
+#contactbutton {
+    padding: 10px 0;
+    columns: white;
+    outline: none;
+    color: rgba(255, 255, 255, 0.717);
+    background:transparent;
+    border: 1px solid white;
+    width: 100%;
+    cursor: pointer;
+}
+
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label {
+    top: -35px;
+    font-size: 14px;
+}
